@@ -1,0 +1,30 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:z3c="http://namespaces.zope.org/z3c">
+
+  <adapter
+     factory=".widget.RadioWidgetFactory" />
+
+  <z3c:widgetTemplate
+     mode="input"
+     widget=".interfaces.IRadioWidget"
+     layer="z3c.form.interfaces.IFormLayer"
+     template="widget_input.pt" />
+
+  <z3c:widgetTemplate
+     mode="hidden"
+     widget="z3c.form.interfaces.IRadioWidget"
+     layer="z3c.form.interfaces.IFormLayer"
+     template="radio_hidden.pt" />
+
+  <zojax:pagelet
+     type="pagelet"
+     for="* z3c.form.interfaces.IForm * .interfaces.ITermItem"
+     template="termitem.pt" />
+
+  <class class=".widget.TermItem">
+    <allow interface=".interfaces.ITermItem" />
+  </class>
+
+</configure>

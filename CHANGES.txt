@@ -1,0 +1,45 @@
+=======
+CHANGES
+=======
+
+0.4.0 (2009-10-20)
+------------------
+
+- Use term value converted to a string for the item label when term title
+  is not present. 
+
+- Make item label clickable so user can select an item by clicking on its label.
+
+
+0.3.2 (2009-09-10)
+------------------
+
+- Update widget styles
+
+
+0.3.1 (2009-07-14)
+------------------
+
+- Hidden template for radio added
+
+- Copyright changed to 'Zope Foundation and Contributors'
+
+
+0.3.0 (2009-03-11)
+------------------
+
+- Added includeDependencies
+
+- Fix widget html
+
+
+0.2.0 (2009-01-25)
+------------------
+
+- Allow create horizontal radio choice
+
+
+0.1.0 (2009-01-21)
+------------------
+
+- Initial release.

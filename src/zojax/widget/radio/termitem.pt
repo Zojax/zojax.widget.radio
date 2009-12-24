@@ -1,0 +1,20 @@
+<tal:block tal:define="item python:view.contexts[-1];
+		       widget python:view.contexts[-2];">
+  <div class="z-listing-icon"
+       tal:omit-tag="not:item/description">
+    <input type="radio"
+           tal:attributes="id item/id;
+                           name string:${widget/name}:list;
+                           title item/title;
+			   checked item/selected;
+			   value item/token;
+                           disabled widget/disabled;" />
+  </div>
+  <div class="z-listing-details"
+       tal:omit-tag="not:item/description">
+    <label tal:attributes="for item/id">
+      <span tal:content="item/title"></span>
+    </label>
+    <div tal:content="item/description" tal:condition="item/description"></div>
+  </div>
+</tal:block>
