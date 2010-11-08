@@ -16,9 +16,10 @@
 $Id$
 """
 from zope import interface
+from zope.schema.interfaces import IChoice
 
 
-class IRadioChoice(interface.Interface):
+class IRadioChoice(IChoice):
     """Choice with radio widget"""
 
 
